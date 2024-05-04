@@ -1,0 +1,20 @@
+#Nombre de nuestro workflow: Prueba 1
+name: Prueba 1
+#Esto quiere decir:
+#En la rama main, cuando se haga un push, se ejecutará el job que se defina en este archivo.
+on: 
+    push:
+        branches:
+        - main
+#Definimos los trabajos que se ejecutarán en este workflow.
+jobs:
+    #Nombre de nuestro trabajo: primer_trabajo
+    primer_trabajo:
+        #Definimos el tipo de máquina en la que se ejecutará el trabajo.
+        runs-on: ubuntu-18.04
+        #Definimos los pasos que se ejecutarán en este trabajo.
+        steps:
+            #Nombre de nuestro paso: primer_paso
+            - name: Imprime un mensaje
+                #Definimos la acción que se ejecutará en este paso.
+              run: echo "Hola, mundo!"
