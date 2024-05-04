@@ -11,7 +11,7 @@ jobs:
     #Nombre de nuestro trabajo: primer_trabajo
     primer_trabajo:
         #Definimos el tipo de máquina en la que se ejecutará el trabajo.
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-latest
         #Definimos los pasos que se ejecutarán en este trabajo.
         steps:
             #Nombre de nuestro paso: primer_paso
