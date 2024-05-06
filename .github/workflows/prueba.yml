@@ -10,6 +10,7 @@ on:
 jobs:
     #Nombre de nuestro trabajo: primer_trabajo
     primer_trabajo:
+      
         #Definimos el tipo de máquina en la que se ejecutará el trabajo.
         runs-on: ubuntu-latest
         #Definimos los pasos que se ejecutarán en este trabajo.
@@ -18,3 +19,4 @@ jobs:
             - name: Imprime un mensaje
                 #Definimos la acción que se ejecutará en este paso.
               run: echo "Hola, mundo!"
+            
