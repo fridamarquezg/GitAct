@@ -31,4 +31,4 @@ jobs:
         conda install -c conda-forge polars
     
     - name: Run script
-      run: python -c "import polars; print(polars.__version__)"
+      run: python -c "import pandas; print(pandas.__version__)"
