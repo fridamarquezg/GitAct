@@ -21,7 +21,7 @@ jobs:
       with:
         activate-environment: myenv
         environment-file: tareas/Cordero_Jp/myenv.yml
-        python-version: 3.10
+        python-version: 3.11
         auto-activate-base: false
 
     - name: Conda info
