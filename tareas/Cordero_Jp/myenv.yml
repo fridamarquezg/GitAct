@@ -1,0 +1,12 @@
+name: myenv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - polars
+  - matplotlib
+  - pip
+  - pip:
+    - some-pip-package # Agrega aquí cualquier paquete que necesite ser instalado via pip

@@ -1,0 +1,32 @@
+name: Run Python Script with Conda
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3
+
+    - name: Setup Miniconda
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        activate-environment: myenv
+        environment-file: tareas/Cordero_JP/myenv.yml
+        python-version: 3.10
+        auto-activate-base: false
+
+    - name: Conda info
+      run: conda info
+
+    - name: Run script
+      run: |
+        python tareas/Cordero_JP/prueba1.py
