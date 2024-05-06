@@ -19,7 +19,6 @@ jobs:
     - name: Setup Miniconda
       uses: conda-incubator/setup-miniconda@v2
       with:
-        conda-version: 'latest'
         activate-environment: myenv
         environment-file: tareas/Cordero_Jp/myenv.yml
         python-version: 3.10
