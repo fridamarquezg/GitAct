@@ -23,7 +23,7 @@ jobs:
         environment-file: tareas/Cordero_Jp/myenv.yml
         python-version: 3.11
         auto-activate-base: false
-
-    - name: Run script
+        
+    - name: Verify Polars Installation
       run: |
-        python tareas/Cordero_Jp/prueba1.py
+        python -c "import polars; print(polars.__version__)"

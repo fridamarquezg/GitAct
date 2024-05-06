@@ -6,4 +6,5 @@ dependencies:
   - python=3.11
   - numpy
   - matplotlib
-  - polars=0.20.23
+  - polars
+  
