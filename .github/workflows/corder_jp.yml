@@ -29,5 +29,6 @@ jobs:
 
     - name: Run script
       run: |
+        conda init
         conda activate myenv
         python tareas/Cordero_Jp/prueba1.py
