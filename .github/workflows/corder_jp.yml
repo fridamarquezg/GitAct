@@ -24,11 +24,9 @@ jobs:
         python-version: 3.11
         auto-activate-base: false
         
-    - name: Activate environment
+    - name: Install dependencies
       run: |
-        source $CONDA/etc/profile.d/conda.sh
-        conda activate myenv
-        conda install -c conda-forge polars
+        conda env update --file myenv.yml --name base
     
     - name: Run script
       run: python -c "import pandas; print(pandas.__version__)"
