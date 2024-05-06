@@ -25,7 +25,9 @@ jobs:
         auto-activate-base: false
         
     - name: Activate environment
-      run: conda activate myenv
+      run: |
+        source $CONDA/etc/profile.d/conda.sh
+        conda activate myenv
     
     - name: Run script
       run: python -c "import polars; print(polars.__version__)"
