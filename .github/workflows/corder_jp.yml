@@ -28,6 +28,7 @@ jobs:
       run: |
         source $CONDA/etc/profile.d/conda.sh
         conda activate myenv
+        conda install -c conda-forge polars
     
     - name: Run script
       run: python -c "import polars; print(polars.__version__)"
