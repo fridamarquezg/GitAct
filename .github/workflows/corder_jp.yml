@@ -20,7 +20,7 @@ jobs:
       uses: conda-incubator/setup-miniconda@v2
       with:
         activate-environment: myenv
-        environment-file: tareas/Cordero_JP/myenv.yml
+        environment-file: tareas/Cordero_Jp/myenv.yml
         python-version: 3.10
         auto-activate-base: false
 
@@ -29,4 +29,4 @@ jobs:
 
     - name: Run script
       run: |
-        python tareas/Cordero_JP/prueba1.py
+        python tareas/Cordero_Jp/prueba1.py
