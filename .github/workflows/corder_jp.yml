@@ -24,7 +24,8 @@ jobs:
         python-version: 3.11
         auto-activate-base: false
         
-    - name: Check Conda installation
-      run: |
-        conda info
-        conda env list
+    - name: Activate environment
+      run: conda activate myenv
+    
+    - name: Run script
+      run: python -c "import polars; print(polars.__version__)"
