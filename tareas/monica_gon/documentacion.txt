@@ -1,0 +1,43 @@
+# Documentación
+
+## Propósito del proyecto
+
+El propósito de este proyecto es comprender mejor el uso de GitHub Actions para la automatización de pruebas en scripts de Python. Esto nos invita a investigar cómo funcionan GitHub Actions y qué se puede hacer con ellos, así como a buscar soluciones a problemas específicos y a consultar la documentación oficial.
+
+## Configuración del workflow de GitHub Actions
+
+El archivo YML que configura el workflow de GitHub Actions es el siguiente:
+
+```yaml
+name: Prueba_GitHub_Actions
+
+on:
+  push:
+    paths:
+      - 'tareas/Monica_Gonzalez/**'
+  pull_request:
+    paths:
+      - 'tareas/Monica_Gonzalez/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Build Docker Image
+      run: |
+        docker build -t gitact_hw tareas/Monica_Gonzalez
+
+    - name: Run Docker Container
+      run: |
+        docker run gitact_hw > output.log
+
+    - name: Print Docker Output
+      run: |
+        cat output.log
